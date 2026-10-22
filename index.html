@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <title>IT'S YUVII — Study App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="logo">Y</span><span>IT'S <b>YUVII</b><small>LEARN • PRACTICE • ACHIEVE</small></span></a>
+    <button id="auth-open" class="btn btn-light">Login / Sign up</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">NEET UG 2027 • YOUR STUDY SPACE</span>
+        <h1>आज की मेहनत,<br><em>कल की सफलता।</em></h1>
+        <p>Physics, Chemistry और Biology की तैयारी एक ही जगह से शुरू करें।</p>
+        <button id="hero-login" class="btn btn-primary">अपनी पढ़ाई शुरू करें →</button>
+      </div>
+      <div class="hero-art"><div class="orb">Y<span>+</span></div><div class="float-card">📚 <b>Study smarter</b><small>One day at a time</small></div></div>
+    </section>
+    <section class="welcome">
+      <div><span class="eyebrow">YOUR DASHBOARD</span><h2 id="welcome-title">Welcome, Future Doctor!</h2><p id="welcome-sub">लॉगिन करके अपनी पढ़ाई की यात्रा शुरू करें।</p></div>
+      <div id="user-actions" class="user-actions hidden"><span id="user-email"></span><button id="logout" class="btn btn-light">Logout</button></div>
+    </section>
+    <section class="subject-grid">
+      <article class="subject physics"><div class="subject-icon">⚡</div><span class="subject-tag">01 / PHYSICS</span><h3>Physics</h3><p>Concepts, formulas और numerical practice.</p><button class="subject-btn" data-subject="Physics">Open subject ↗</button></article>
+      <article class="subject chemistry"><div class="subject-icon">🧪</div><span class="subject-tag">02 / CHEMISTRY</span><h3>Chemistry</h3><p>Physical, Organic और Inorganic Chemistry.</p><button class="subject-btn" data-subject="Chemistry">Open subject ↗</button></article>
+      <article class="subject biology"><div class="subject-icon">🌿</div><span class="subject-tag">03 / BIOLOGY</span><h3>Biology</h3><p>NCERT आधारित Botany और Zoology revision.</p><button class="subject-btn" data-subject="Biology">Open subject ↗</button></article>
+    </section>
+    <section class="notice"><div class="notice-icon">✦</div><div><b>आपका लक्ष्य: NEET UG 2027</b><p>यह शुरुआती वर्जन है। अगला चरण: chapter-wise notes, mock tests और video lessons जोड़ना।</p></div></section>
+    <footer>© 2026 IT'S YUVII · Made for your learning journey</footer>
+  </main>
+
+  <dialog id="auth-dialog">
+    <form method="dialog" class="dialog-close"><button class="x-btn" aria-label="Close">×</button></form>
+    <div class="auth-heading"><span class="logo">Y</span><h2 id="auth-title">Welcome to IT'S YUVII</h2><p id="auth-description">अपने study account में प्रवेश करें।</p></div>
+    <form id="auth-form">
+      <label>Email address<input id="email" type="email" placeholder="you@example.com" autocomplete="email" required /></label>
+      <label>Password<input id="password" type="password" placeholder="कम से कम 6 अक्षर" minlength="6" autocomplete="current-password" required /></label>
+      <p id="auth-message" class="message" aria-live="polite"></p>
+      <button id="auth-submit" class="btn btn-primary full" type="submit">Login</button>
+    </form>
+    <p class="switch-line"><span id="switch-text">नया अकाउंट चाहिए?</span> <button id="switch-mode" class="text-btn" type="button">Sign up</button></p>
+    <p class="fineprint">Login सुविधा चालू करने के लिए README में दिए गए Firebase सेटअप चरण पूरे करें।</p>
+  </dialog>
+  <dialog id="subject-dialog">
+    <form method="dialog" class="dialog-close"><button class="x-btn" aria-label="Close">×</button></form>
+    <span class="eyebrow">SUBJECT SPACE</span><h2 id="subject-title">Physics</h2>
+    <p>इस शुरुआती वर्जन में subject dashboard तैयार है। यहाँ आगे chapter-wise notes, tests और videos जोड़े जा सकते हैं।</p>
+    <ul><li>Chapter-wise notes — अगला चरण</li><li>Practice questions — अगला चरण</li><li>Video lessons — अगला चरण</li></ul>
+    <button class="btn btn-primary full" id="subject-login">Login to continue</button>
+  </dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
